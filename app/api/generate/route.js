@@ -6,37 +6,50 @@ export async function POST(req) {
     const db = client.db("urllink");
     const collection = db.collection("url");
 
-    
     const body = await req.json();
+    console.log("Incoming body:", body);
 
+    const { url, shorturl } = body || {};
 
-const docs = await collection.findOne({shorturl:body.shorturl})
-if (docs) {
-  return Response.json(
-    {
-      success: false,
-      error: true,
-      message: "URL Already Exists",
-      shorturl: body.shorturl, 
-    },
-    { status: 400 }
-  );
-}
+   
+    if (!url || !shorturl) {
+      return Response.json(
+        { success: false, error: true, message: "Missing url or shorturl" },
+        { status: 400 }
+      );
+    }
 
-  const result = await collection.insertOne({
-    url: body.url,
-    shorturl: body.shorturl
-  });
   
-  return Response.json({
-    message: "Url Shortened Successfully",
-    success: true,
-    data: result,
-    shorturl: body.shorturl
-  });
+    const existing = await collection.findOne({ shorturl });
+    if (existing) {
+      return Response.json(
+        {
+          success: false,
+          error: true,
+          message: "Short URL already exists",
+          shorturl,
+        },
+        { status: 400 }
+      );
+    }
 
+ 
+    const result = await collection.insertOne({ url, shorturl });
 
+    return Response.json(
+      {
+        success: true,
+        message: "URL shortened successfully",
+        data: result,
+        shorturl,
+      },
+      { status: 201 }
+    );
   } catch (error) {
-    return Response.json({ success: false, error: error.message }, { status: 500 });
+    console.error("API Error:", error);
+    return Response.json(
+      { success: false, error: error.message },
+      { status: 500 }
+    );
   }
 }

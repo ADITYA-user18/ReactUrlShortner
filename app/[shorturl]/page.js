@@ -11,10 +11,10 @@ export default async function Page({ params }) {
   const docs = await collection.findOne({ shorturl });
 
   if (docs) {
-  
-    redirect(docs.shorturl);
+   
+    redirect(docs.url);
   } else {
-    
-    redirect(process.env.NEXT_PUBLIC_HOST || "/");
+   
+    redirect(process.env.HOST || "/");
   }
 }
