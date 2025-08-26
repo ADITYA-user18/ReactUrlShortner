@@ -5,11 +5,10 @@ const Navbar = () => {
   return (
     <nav className="bg-orange-400 text-white h-20 w-full">
       <div className="container mx-auto flex md:flex-row flex-col justify-between items-center h-full px-8">
-        <div className="font-bold text-3xl tracking-wide ">
+        <div className="font-bold text-3xl tracking-wide">
           LinkSpark
         </div>
 
-      
         <ul className="flex gap-8 items-center">
           <li>
             <Link href="/">Home</Link>
@@ -23,15 +22,23 @@ const Navbar = () => {
           <li>
             <Link href="/contact">Contact Us</Link>
           </li>
-          <li className="flex gap-4">
+          <li>
             <Link href="/shorten">
               <button className="bg-white text-amber-800 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
                 Try now
               </button>
             </Link>
-            <Link className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-amber-800 transition" href="/https://github.com/ADITYA-user18/ReactUrlShortner">  
-                GitHub
-            </Link>
+          </li>
+          <li>
+            {/* Use <a> for external links */}
+            <a
+              href="https://github.com/ADITYA-user18/ReactUrlShortner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-amber-800 transition"
+            >
+              GitHub
+            </a>
           </li>
         </ul>
       </div>
