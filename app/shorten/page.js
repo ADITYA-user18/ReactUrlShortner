@@ -10,11 +10,12 @@ const Shorten = () => {
 
   const generate = async () => {
     try {
-      const response = await fetch("/api/shorten", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url, shorturl }),
-      });
+      const response = await fetch("/api/generate", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ url, shorturl }),
+});
+
 
       const result = await response.json();
       console.log("API result:", result);
