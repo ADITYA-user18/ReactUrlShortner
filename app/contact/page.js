@@ -11,7 +11,7 @@ const ContactPage = () => {
         </h1>
 
         <p className="text-gray-600 text-center mb-8">
-          Let’s connect! Feel free to reach out through any of the platforms below.
+          Let s connect! Feel free to reach out through any of the platforms below.
         </p>
 
         

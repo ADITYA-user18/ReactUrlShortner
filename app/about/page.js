@@ -13,7 +13,7 @@ const AboutPage = () => {
         
         <p className="text-gray-600 text-lg leading-relaxed mb-6 text-center">
           Shortly is a simple and fast URL shortener that helps you create
-          short, shareable links in seconds. Whether you're sharing on social
+          short, shareable links in seconds. Whether you are sharing on social
           media, sending links to friends, or managing long URLs, Shortly makes
           it easy and efficient.
         </p>

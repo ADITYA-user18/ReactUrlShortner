@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
-const shorten = () => {
+const Shorten = () => {
   const [url, seturl] = useState('')
   const [shorturl, setshorturl] = useState('')
   const [generated, setgenerated] = useState('');
@@ -64,4 +64,4 @@ const shorten = () => {
   )
 }
 
-export default shorten
+export default Shorten
