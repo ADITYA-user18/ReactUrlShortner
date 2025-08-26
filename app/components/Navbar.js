@@ -29,7 +29,7 @@ const Navbar = () => {
                 Try now
               </button>
             </Link>
-            <Link href="/github">
+            <Link href="/https://github.com/ADITYA-user18/ReactUrlShortner">
               <button className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-amber-800 transition">
                 GitHub
               </button>
