@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <section className="grid grid-cols-2 bg-amber-100 h-full ">
+        <section className="grid grid-cols-2 bg-white h-full  ">
           <div className="flex justify-center flex-col items-center font">
             <p className="font-bold text-3xl">
               The Smarter Way to Share Links
