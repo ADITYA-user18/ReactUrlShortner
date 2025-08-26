@@ -12,7 +12,7 @@ export default async function Page({ params }) {
 
   if (docs) {
   
-    redirect(docs.url);
+    redirect(docs.shorturl);
   } else {
     
     redirect(process.env.NEXT_PUBLIC_HOST || "/");
