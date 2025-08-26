@@ -30,16 +30,16 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            {/* Use <a> for external links */}
-            <a
-              href="https://github.com/ADITYA-user18/ReactUrlShortner"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-amber-800 transition"
-            >
-              GitHub
-            </a>
-          </li>
+  <a
+    href="https://github.com/ADITYA-user18/ReactUrlShortner"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-amber-800 transition"
+  >
+    GitHub
+  </a>
+</li>
+
         </ul>
       </div>
     </nav>

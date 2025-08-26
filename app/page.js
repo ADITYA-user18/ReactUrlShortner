@@ -23,7 +23,7 @@ export default function Home() {
                   Try now
                 </button>
               </Link>
-              <Link href="/github">
+              <Link href="https://github.com/ADITYA-user18/ReactUrlShortner">
                 <button className=" bg-amber-700 text-amber-50 hover:bg-amber-950 hover:scale-105 border  px-4 py-2 rounded-lg font-semibold transition">
                   GitHub
                 </button>
